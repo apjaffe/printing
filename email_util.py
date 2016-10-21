@@ -5,5 +5,3 @@ def send_email(text, subj, to, frm):
   proc.stdin.write(text)
   proc.stdin.close()
   proc.wait()
-
-send_email("hi","test","","")
