@@ -4,5 +4,6 @@ def send_email(text, subj, to, frm):
   proc = Popen(["mailx","-s",subj,to, "-r", frm], stdin=PIPE)
   proc.stdin.write(text)
   proc.stdin.close()
+  proc.wait()
 
 send_email("hi","test","","")
